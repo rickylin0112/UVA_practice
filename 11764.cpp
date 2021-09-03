@@ -29,7 +29,7 @@ int main(){
 			}
 			
 		}
-		printf ("Case %d:%d %d\n", cassss , high ,low);
+		printf ("Case %d: %d %d\n", cassss , high ,low);
 
 
 	}
