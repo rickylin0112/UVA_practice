@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
 	string a;
+	string c = a ;
 	while (cin >> a)
 	{
 		if (a == "0")
@@ -19,11 +20,20 @@ int main()
 
 			for (int i = 0; i < a.size(); ++i)
 			{
-				sum += a[i]-'0';
+				a += a[i]-'0';
+				if (a % 10 > 1){
+					tmp ++; 
+				}
+				else {
+					if (a % 9 == 0){
+						printf("%d is a multiple of 9 and has 9-degree %d.",c ,tmp);
+					}
+					else {
+						printf("%d is not a multiple of 9.",c);
+					}
+				}
 			}
-			if ((sum - '0')%10 > 1 ){
-				back
-			}
+			
 		}
 			
 	}
