@@ -7,7 +7,7 @@ int main(){
 	cin >> T ;
 	int sum = 0;
 	int degree = 0;
-	for (int i = 0; i < T.lenght(); ++i)
+	for (int i = 0; i < T.size(); ++i)
 	{
 		sum += T[i];
 		degree ++;
