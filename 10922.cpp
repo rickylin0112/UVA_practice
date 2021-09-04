@@ -1,25 +1,26 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 int main(){
-	char N[];
-	cin >> N;
-	int T = N;
-	if(N == '0'){
-		break;
+	int N;
+	char T[100];
+	cin >> T ;
+	int sum = 0;
+	int degree = 0;
+	for (int i = 0; i < T.lenght(); ++i)
+	{
+		sum += T[i];
+		degree ++;
 	}
-	else {
-		int c = 0;
-		if ((N-48)%9 == 0 ){
-			c = 1;
-		}
-		else {
-			c = 0;
-		}
-		int sum = 0 ;
-		for (int i = 0; i < N; ++i)
-		{
-			
-		}
+	if (sum % 10 > 0){
+		sum = sum %10 + (sum - (sum%10));
+		degree ++ ; 
+	}
+	else if (sum % 10 < 0 && sum %9 == 0) {
+		printf("%d is a multiple of 9 and has 9-degree %d",T,degree);
 
 	}
-}
+	return 0;
+	}
+
+
