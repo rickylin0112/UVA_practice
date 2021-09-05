@@ -18,13 +18,13 @@ int main()
 			string tmp = a;
 			while(true)
 			{
+				N = 0;
 				for (int i = 0; i < tmp.size(); ++i)
-				{
+				{	
 					N += (int)(tmp[i] -'0');
 				}
-				if(N %9 !=0)
+				if(N % 9 != 0)
 				{
-					//cout << a << "is not a multiple of 9.\n";
 					break;
 				}
 				else
@@ -33,10 +33,9 @@ int main()
 					if (N == 9){
 						break; 
 					}
-					// cout << a << "is a multiple of 9 and has 9-degree 1.\n";
-					
 				}
 				tmp = to_string(N);
+
 			}
 
 			if (degree == 0){
@@ -44,7 +43,7 @@ int main()
 			}
 			else 
 			{
-				cout << a << " is a multiple of 9 and has 9-degree" << degree << ".\n";
+				cout << a << " is a multiple of 9 and has 9-degree " << degree << ".\n";
 			}
 
 
