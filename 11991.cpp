@@ -37,7 +37,12 @@ int main()
 				{
 					break;
 				}
+				else {
+					cout << "0\n";
+				}
 			}
+			cout << cor << "\n";
 		}
+
 	}
 }
