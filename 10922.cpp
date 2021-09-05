@@ -5,7 +5,6 @@ using namespace std;
 int main()
 {
 	string a;
-	string c = a ;
 	while (cin >> a)
 	{
 		if (a == "0")
@@ -14,29 +13,78 @@ int main()
 		}
 		else 
 		{
-			string sum = 0;
-			int tmp = 0;
-
-
-			for (int i = 0; i < a.size(); ++i)
+			int N = 0;
+			int degree =0;
+			string tmp = a;
+			while(true)
 			{
-				a += a[i]-'0';
-				if (a % 10 > 1){
-					tmp ++; 
+				for (int i = 0; i < tmp.size(); ++i)
+				{
+					N += (int)(tmp[i] -'0');
 				}
-				else {
-					if (a % 9 == 0){
-						printf("%d is a multiple of 9 and has 9-degree %d.",c ,tmp);
-					}
-					else {
-						printf("%d is not a multiple of 9.",c);
-					}
+				if(N %9 !=0)
+				{
+					//cout << a << "is not a multiple of 9.\n";
+					break;
 				}
+				else
+				{	
+					degree ++;
+					if (N == 9){
+						break; 
+					}
+					// cout << a << "is a multiple of 9 and has 9-degree 1.\n";
+					
+				}
+				tmp = to_string(N);
 			}
+
+			if (degree == 0){
+				cout << a << " is not a multiple of 9.\n";
+			}
+			else 
+			{
+				cout << a << " is a multiple of 9 and has 9-degree" << degree << ".\n";
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			// 123
+			// 12
+			// 1
+			// 0
+			// total ="321"
+			// while(N){
+			// 	total+=char((N%10)+'0');
+			// 	N/=10;
+			// }
+
+			// for (int i = 0; i < total.length()/2; ++i)
+			// {
+			// 	// char tmp = total[i];
+			// 	// total[i] =  total[total.length()-1-i];
+			// 	// total[total.length()-1-i] = tmp;
+			// 	swap(total[i] , total[total.length()-1-i]);
+			// }
+
+			// reverse(total.begin(), total.end());
+
+			// N = stoi(total);
 			
 		}
 			
-	}
+}	
 
 	return 0;
 }
